@@ -4,6 +4,8 @@ module SheetWrap
 
     attr_reader :drive_worksheet, :headers, :rows
 
+    def_delegator :@drive_worksheet, :title, :title
+    def_delegator :@drive_worksheet, :title=, :title=
     def_delegator :@drive_worksheet, :[], :[]
     def_delegator :@drive_worksheet, :[]=, :[]=
     def_delegator :@drive_worksheet, :num_cols, :num_cols
