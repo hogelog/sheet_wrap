@@ -18,8 +18,7 @@ module SheetWrap
     def load
       @headers = (1..num_cols).map{|col| drive_worksheet[1, col] }
 
-      @rows =
-      (2..num_rows).map do |row|
+      @rows = (2..num_rows).map do |row|
         ::SheetWrap::Row.new(self, row)
       end
     end
